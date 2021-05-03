@@ -3,7 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 
-describe('AppController (e2e)', () => {
+describe('Should refuse connection without a Bearer Token', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -15,9 +15,9 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/documents (post)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .post('/documents')
       .expect(200)
       .expect('Hello World!');
   });

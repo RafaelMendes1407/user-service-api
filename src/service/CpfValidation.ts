@@ -13,7 +13,7 @@ export function IsValidCPF(validationOptions?: ValidationOptions) {
 }
 
 @ValidatorConstraint()
-class IsValidCPFConstraint implements ValidatorConstraintInterface {
+export class IsValidCPFConstraint implements ValidatorConstraintInterface {
     validate(value: string, validationArguments?: ValidationArguments): boolean | Promise<boolean> {
         return validateCpf(value);
     }

@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { readFileSync } from "fs";
 import { readdirSync } from "fs";
 import { writeFileSync } from "fs";
-import { DocumentAlreadyExists } from "src/domain/UserAlreadyExistError";
+import { DocumentAlreadyExists } from "src/domain/DocumentAlreadyExistError";
 import { Document } from "src/model/Document"
 
 @Injectable()
