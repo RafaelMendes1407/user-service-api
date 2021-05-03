@@ -1,7 +1,6 @@
-import { Controller, Delete, Get, Put, Post, Body } from "@nestjs/common";
+import { Controller, Get, Post, Body } from "@nestjs/common";
 import { UserService } from "src/service/UserService";
 import { User } from "src/model/User";
-
 
 @Controller('users')
 export class UserController {
@@ -10,9 +9,8 @@ export class UserController {
     };
     
     @Post()
-    signin(@Body() user: User) {
-        this.userService.createUser(user);
-        return;
+    signin(@Body() user: User): User {
+        return this.userService.createUser(user);
     }
 
     @Get()
@@ -20,19 +18,5 @@ export class UserController {
         return Response;
     }
 
-    @Get()
-    getUserDocumentation() {
-        return Response;
-    }
-
-    @Put()
-    updateDocumentation() {
-        return Response;
-    }
-
-    @Delete()
-    deleteDocumentation() {
-
-    }
 
 }

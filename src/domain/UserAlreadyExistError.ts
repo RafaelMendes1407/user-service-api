@@ -1,5 +1,3 @@
-
-
 export class UserAlreadyExistError implements Error {
     name: string;
     message: string;

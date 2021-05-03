@@ -1,0 +1,7 @@
+name: Rafael Mendes
+rg: MG14253456
+cpf: 641.060.450-52
+birthdate: 14/07/1994
+
+username: rafael
+password: $2b$10$MfQ4HfEk38Y9I7QKwIjpo.T1naQcTKunTtwMbElgV6TSbcWPQf/We
