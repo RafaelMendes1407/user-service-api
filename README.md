@@ -70,6 +70,6 @@ $ http://localhost:3000/auth/login
 $ http://localhost:3000/auth/register
 
 # Create Document - POST - Requires Bearer Token - Document Information
-$ http://localhost:3000/auth/register
+$ http://localhost:3000/document
 
 ```

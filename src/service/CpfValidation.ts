@@ -19,7 +19,7 @@ export class IsValidCPFConstraint implements ValidatorConstraintInterface {
     }
 }
 
-function validateCpf(cpf: string) {
+function validateCpf(cpf: string): boolean {
     cpf = cpf.replace(/[^\d]+/g, '');
     if (cpf == '') return false;
     let cpfNuns = cpf.split('');
@@ -33,7 +33,7 @@ function validateCpf(cpf: string) {
         };
     });
 
-    if (duplicateDigits.length < 1) {
+    if (duplicateDigits.length <= 1) {
         return false;
     }
 
